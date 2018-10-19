@@ -20,25 +20,39 @@ public class Main {
         String question4and5 = "To opt out, you’ll need to enter the Settings menu by clicking the three vertical dots, all the way in the upper right corner of the browser. From there, you’ll need to enter the Advanced settings at the very bottom and find the “Allow Chrome sign in” toggle, then turn it to off. Doing so lets you sign into Google services like Gmail and Maps without signing into the Chrome browser itself.";
 
 
-        System.out.println(question1and2);
-        System.out.println(question3);
-        System.out.println(question4and5);
+        //System.out.println(question1and2);
+        //System.out.println(question3);
+        //System.out.println(question4and5);
 
         // print each answer at the end
 
+        Splitter s = new Splitter(question1and2);
+
         // Question 1
         // Return the Host
+        System.out.println(s.getHost());
 
         // Question 2
         // return sum of a and b
+        System.out.println(s.aandb());
 
+        hash h = new hash(question4and5);
         // Question 3
         // convert to java object, increment num, convert back to json and return
 
+
+
+
+
+
         // Question 4
         // return unique words
+        System.out.println(h.f);
+
+
 
         // Question 5
         // return 2nd most common word
-    }
+        System.out.println(h.word2);
+        }
 }
