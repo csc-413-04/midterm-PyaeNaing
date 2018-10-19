@@ -31,14 +31,22 @@ public class hash {
                 word.replace(Split[i], word.get(Split[i]) + 1);
                 if(max < word.get(Split[i]))
                 {
-                    if(!word2.equals(Split[i])) {
-                        smax = max;
-                        max = word.get(Split[i]);
-                        word2 = word1;
-                    }
-                    word1 = Split[i];
-                    max = word.get(Split[i]);
 
+                        if (!word1.equals(Split[i])) {
+                            smax = max;
+                            word2 = word1;
+                        }word1 = Split[i];
+
+                        max = word.get(Split[i]);
+                    }
+                    else
+                {
+                    max = max;
+                    word2 = word1;
+                word1 = Split[i];
+
+                max = word.get(Split[i]);
+                }
                 }
             }
         }
@@ -56,4 +64,3 @@ public class hash {
         //System.out.println(count);
 
     }
-}
